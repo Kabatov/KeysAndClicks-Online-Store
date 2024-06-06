@@ -1,4 +1,4 @@
-const peripheryData = [
+export const peripheryData = [
   {
     id: 1,
     link: 'Varmilo',

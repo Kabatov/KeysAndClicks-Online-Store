@@ -2,17 +2,23 @@
     <main class="main">
         <section class="category-swiper">
             <div class="swiper">
-                <div v-for="periphery in peripherys"
-                     :key="periphery.id"
-                     class="swiper-slider">
-                    <a :href="periphery.link"
-                       class="swiper-slider__link"
+                <div
+                    v-for="periphery in peripherys"
+                    :key="periphery.id"
+                    class="swiper-slider"
+                >
+                    <a
+                        :href="periphery.link"
+                        class="swiper-slider__link"
                     >
-                        <img :alt="periphery.image"
-                             src="#">
+                        <img
+                            :alt="periphery.image"
+                            src="#"
+                        >
                     </a>
-                    <a :href="periphery.link"
-                       class="swiper-slider__content"
+                    <a
+                        :href="periphery.link"
+                        class="swiper-slider__content"
                     >
                         <h4 class="text-product">{{ periphery.name }}</h4>
                         <p class="product-description">{{ periphery.description }}</p>
@@ -20,50 +26,71 @@
                 </div>
             </div>
             <div class="slidecontainer">
-                <input type="range"
-                       min="1"
-                       max="100"
-                       value="50"
-                       class="slider"
-                       id="myRange"
+                <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    class="slider"
+                    id="myRange"
                 >
             </div>
         </section>
         <section class="main-info">
             <div class="main-info__container">
                 <div class="main-info__payment">
-                    <svg class="svg"
-                         width="24"
-                         height="24"
+                    <svg
+                        class="svg"
+                        width="24"
+                        height="24"
                     />
-                    <h3 class="main-info__name">Сплит оплата</h3>
-                    <p class="main-info__description">Закажите сейчас - <br>оплатить можно потом</p>
+                    <h3 class="main-info__name">
+                        Сплит оплата
+                    </h3>
+                    <p class="main-info__description">
+                        Закажите сейчас - <br>оплатить можно потом
+                    </p>
                 </div>
                 <div class="main-info__showroom">
-                    <svg class="svg"
-                         width="24"
-                         height="24"
+                    <svg
+                        class="svg"
+                        width="24"
+                        height="24"
                     />
-                    <h3 class="main-info__name">Все можно покликать в шоуруме</h3>
-                    <p class="main-info__description">Все, что есть в наличии на сайте - есть в
-                        шоуруме</p>
+                    <h3 class="main-info__name">
+                        Все можно покликать в шоуруме
+                    </h3>
+                    <p class="main-info__description">
+                        Все, что есть в наличии на сайте - есть в
+                        шоуруме
+                    </p>
                 </div>
                 <div class="main-info__delivery">
-                    <svg class="svg"
-                         width="24"
-                         height="24"
+                    <svg
+                        class="svg"
+                        width="24"
+                        height="24"
                     />
-                    <h3 class="main-info__name">Доставка по России и не <br>только</h3>
-                    <p class="main-info__description">А еще по Беларуси, Казахстану,
-                        Армении<br> и Кыргызстану</p>
+                    <h3 class="main-info__name">
+                        Доставка по России и не <br>только
+                    </h3>
+                    <p class="main-info__description">
+                        А еще по Беларуси, Казахстану,
+                        Армении<br> и Кыргызстану
+                    </p>
                 </div>
                 <div class="main-info__guarantee">
-                    <svg class="svg"
-                         width="24"
-                         height="24"
+                    <svg
+                        class="svg"
+                        width="24"
+                        height="24"
                     />
-                    <h3 class="main-info__name">Гарантия на все</h3>
-                    <p class="main-info__description">Даже на услуги<br> и товары из Resale</p>
+                    <h3 class="main-info__name">
+                        Гарантия на все
+                    </h3>
+                    <p class="main-info__description">
+                        Даже на услуги<br> и товары из Resale
+                    </p>
                 </div>
             </div>
         </section>
@@ -71,7 +98,7 @@
 </template>
 
 <script>
-import peripheryData from './peripheryData';
+import { peripheryData } from './peripheryData';
 
 export default {
   data() {
