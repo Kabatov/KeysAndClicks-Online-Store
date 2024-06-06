@@ -64,6 +64,7 @@ module.exports = {
       imports: 'never',
       exports: 'never',
       functions: 'never'
-    }]
+    }],
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix']
   }
 };
