@@ -1,21 +1,21 @@
 <template>
     <div class="container">
-        <HeaderMenu />
-        <MainMenu />
-        <FooterMenu />
+        <SiteHeader />
+        <PromoPage />
+        <SiteFooter />
     </div>
 </template>
 
 <script>
-import HeaderMenu from './components/Header/HeaderMenu.vue';
-import MainMenu from './components/Main/MainMenu.vue';
-import FooterMenu from './components/Footer/FooterMenu.vue';
+import SiteHeader from './components/Header/SiteHeader.vue';
+import PromoPage from './components/Main/PromoPage.vue';
+import SiteFooter from './components/Footer/SiteFooter.vue';
 
 export default {
   components: {
-    HeaderMenu,
-    MainMenu,
-    FooterMenu
+    SiteHeader,
+    PromoPage,
+    SiteFooter
   }
 };
 </script>

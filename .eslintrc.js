@@ -11,15 +11,6 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
-    'vue/html-self-closing': ['error', {
-      html: {
-        void: 'never',
-        normal: 'always',
-        component: 'always'
-      },
-      svg: 'always',
-      math: 'always'
-    }],
     'vue/html-indent': [
       'error',
       4,
