@@ -36,12 +36,6 @@ export default {
     gap: 5px;
 }
 
-.promo-info {
-    padding: 50px 30px 0;
-    font-family: 'Franklin Gothic Medium', sans-serif;
-    font-size: 16px;
-}
-
 .promo-info__name {
     margin: 16px 0 4px 0;
 }

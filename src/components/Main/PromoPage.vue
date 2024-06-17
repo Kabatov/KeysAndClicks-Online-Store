@@ -1,49 +1,35 @@
 <template>
-    <main class="promo">
-        <section class="category-swiper">
-            <PromoItem />
-            <div class="slidecontainer">
-                <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value="50"
-                    class="slider"
-                    id="myRange"
-                >
-            </div>
+    <main class="promo-page">
+        <section class="promo-page__swiper">
+            <PromoItems />
         </section>
-        <section class="promo-info">
+        <section class="promo-page__info">
             <PromoInfo :infoBlocks="promoBlocks"/>
         </section>
     </main>
 </template>
 
 <script>
-import PromoItem from './PromoItem.vue';
+import PromoItems from './PromoItems.vue';
 import PromoInfo from './PromoInfo.vue';
+import { promoInfoData } from './promoInfoData';
 
 export default {
   components: {
-    PromoItem,
+    PromoItems,
     PromoInfo
   },
 
   data() {
     return {
-      promoBlocks: [
-        { svg: '#', title: 'Сплит оплата', text: 'Закажите сейчас - оплатить можно потом' },
-        { svg: '#', title: 'Все можно покликать в шоуруме', text: 'Все, что есть в наличии на сайте - есть в шоуруме' },
-        { svg: '#', title: 'Доставка по России и не только', text: 'А еще по Беларуси, Казахстану, Армении и Кыргызстану' },
-        { svg: '#', title: 'Гарантия на все', text: 'Даже на услуги и товары из Resale' }
-      ]
+      promoBlocks: promoInfoData
     };
   }
 };
 </script>
 
 <style>
-.category-swiper {
+.promo-page__swiper {
     padding: 20px;
     background-color: #B0C4DE;
     border-radius: 20px;
@@ -86,4 +72,11 @@ export default {
     background: #4CAF50;
     cursor: pointer;
 }
+
+.promo-page__info {
+    padding: 50px 30px 0;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 16px;
+}
+
 </style>
