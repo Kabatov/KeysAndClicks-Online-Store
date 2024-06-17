@@ -26,7 +26,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
-    background-color: #EEECE7;
+  background-color: #EEECE7;
 }
 </style>
