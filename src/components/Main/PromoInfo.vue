@@ -1,8 +1,9 @@
 <template>
     <div class="promo-info__container">
-        <div class="promo-info__block"
-             v-for="item in infoBlocks"
-             :key="item.infoBlock"
+        <div
+            class="promo-info__block"
+            v-for="item in infoBlocks"
+            :key="item.infoBlock"
         >
             {{ item.svg }}
             <h2 class="promo-info__name">
@@ -26,17 +27,19 @@ export default {
 };
 </script>
 
-<style>
-.promo-info__container {
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
-    gap: 5px;
-}
+<style lang="scss">
+.promo-info {
+    &__container {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-align: center;
+        gap: 5px;
+    }
 
-.promo-info__name {
-    margin: 16px 0 4px 0;
+    &__name {
+        margin: 16px 0 4px 0;
+    }
 }
 </style>
