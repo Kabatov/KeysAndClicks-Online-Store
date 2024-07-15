@@ -1,7 +1,7 @@
 <template>
-    <div class="promo-info__container">
+    <div class="promo-info">
         <div
-            class="promo-info__block"
+            class="promo-info__content"
             v-for="item in infoBlocks"
             :key="item.infoBlock"
         >
@@ -17,11 +17,14 @@
 </template>
 
 <script>
+import { promoInfoData } from './promoInfoData';
+
 export default {
   props: {
     infoBlocks: {
       type: Array,
-      required: true
+      required: true,
+      default: () => promoInfoData
     }
   }
 };
@@ -29,14 +32,12 @@ export default {
 
 <style lang="scss">
 .promo-info {
-    &__container {
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        text-align: center;
-        gap: 5px;
-    }
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 5px;
 
     &__name {
         margin: 16px 0 4px 0;

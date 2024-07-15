@@ -18,11 +18,14 @@
 </template>
 
 <script>
+import { navigationData } from './navigationData';
+
 export default {
   props: {
     links: {
       type: Array,
-      required: true
+      required: true,
+      default: () => navigationData
     }
   }
 };
@@ -40,17 +43,16 @@ export default {
     &__item {
       margin-right: 20px;
       font-size: 16px;
-      font-family: 'Franklin Gothic Medium', sans-serif;
     }
 
     &__link {
       width: 100px;
       color: black;
       text-decoration: none;
-    }
 
-    &__link:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 }
 </style>

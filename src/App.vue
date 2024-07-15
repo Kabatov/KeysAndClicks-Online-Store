@@ -1,21 +1,21 @@
 <template>
-    <div class="container">
-        <SiteHeader />
+    <div class="keys-and-clicks">
+        <Header />
         <PromoPage />
-        <SiteFooter />
+        <Footer />
     </div>
 </template>
 
 <script>
-import SiteHeader from './components/Header/SiteHeader.vue';
+import Header from './components/Header/Header.vue';
 import PromoPage from './components/Main/PromoPage.vue';
-import SiteFooter from './components/Footer/SiteFooter.vue';
+import Footer from './components/Footer/Footer.vue';
 
 export default {
   components: {
-    SiteHeader,
+    Header,
     PromoPage,
-    SiteFooter
+    Footer
   }
 };
 </script>
@@ -25,9 +25,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
-.container {
+.keys-and-clicks {
   background-color: #EEECE7;
 }
 </style>

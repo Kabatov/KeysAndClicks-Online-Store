@@ -1,16 +1,16 @@
 <template>
-    <div class="footer-info__column">
-        <h4 class="footer-info__text">
+    <div class="links-list__column">
+        <h4 class="links-list__text">
             {{ title }}
         </h4>
-        <ul class="footer-info__list">
+        <ul class="links-list__list">
             <li
-                class="footer-info__item"
+                class="links-list__item"
                 v-for="item in links"
                 :key="item.link"
             >
                 <a
-                    class="footer-info__link"
+                    class="links-list__link"
                     :href="item.link"
                 >
                     {{ item.text }}
@@ -36,10 +36,11 @@ export default {
 </script>
 
 <style lang="scss">
-.footer-info {
-    &__text {color: #696969;
-    margin-bottom: 12px;
-    font-size: 18px;}
+.links-list {
+    &__text {
+        color: #696969;
+        margin-bottom: 12px;
+        font-size: 18px;}
 
     &__list {
         list-style-type: none;

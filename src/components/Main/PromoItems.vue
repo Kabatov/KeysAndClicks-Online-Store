@@ -19,6 +19,7 @@ import 'vue3-carousel/dist/carousel.css';
 import {
   Carousel, Slide, Pagination, Navigation
 } from 'vue3-carousel';
+import { ref } from 'vue';
 import { peripheryData } from './peripheryData';
 import PromoItem from './PromoItem.vue';
 
@@ -31,9 +32,11 @@ export default {
     Pagination,
     Navigation
   },
-  data() {
+  setup() {
+    const peripherys = ref(peripheryData);
+
     return {
-      peripherys: peripheryData
+      peripherys
     };
   }
 };
@@ -45,6 +48,7 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     max-width: 100%;
+    font-size: 18px;
 
     &__slider {
       padding-right: 20px;
@@ -63,11 +67,6 @@ export default {
     &__content {
       text-decoration: none;
       color: #000000;
-      font-family: 'Franklin Gothic Medium', sans-serif;
-      font-size: 18px;
-    }
-
-    &__product-name {
       font-size: 18px;
     }
 

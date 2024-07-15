@@ -1,28 +1,28 @@
 <template>
-    <footer class="site-footer">
-        <div class="site-footer__input">
-            <h3 class="site-footer__name">
+    <footer class="footer">
+        <div class="footer__input">
+            <h3 class="footer__name">
                 Делимся полезным контентом. Присоединяйся!
             </h3>
             <form
-                class="site-footer__mail"
+                class="footer__mail"
                 @submit.prevent
             >
                 <input
-                    class="site-footer__mail_subscribe"
+                    class="footer__mail_subscribe"
                     v-model="subscribeEmail.email"
                     placeholder="Введите Email"
                     type="email"
                 >
                 <button
-                    class="site-footer__mail_button"
-                    @click="addEmail"
+                    class="footer__mail_button"
+                    @click="handleAddEmail"
                 >
                     Подписаться
                 </button>
             </form>
         </div>
-        <div class="site-footer__info">
+        <div class="footer__info">
             <LinksList
                 v-for="(block, index) in blocks"
                 :key="index"
@@ -50,7 +50,7 @@ export default {
     };
   },
   methods: {
-    addEmail() {
+    handleAddEmail() {
       this.subscribeEmail.id = Date.now();
       this.subscribeEmail = {
         email: ''
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss">
-.site-footer {
+.footer {
     padding-top: 50px;
     background-color: black;
     color: white;
@@ -85,7 +85,6 @@ export default {
       width: 640px;
       height: 65px;
       border-radius: 30px;
-      font-family: 'Franklin Gothic Medium', sans-serif;
       font-size: 20px;
       padding: 0 200px 0 20px;
     }
@@ -100,7 +99,6 @@ export default {
       border: 1px solid white;
       background-color: #6495ED;
       color: white;
-      font-family: 'Franklin Gothic Medium', sans-serif;
       font-size: 20px;
       cursor: pointer;
     }
@@ -108,7 +106,6 @@ export default {
     &__info {
       display: flex;
       justify-content: space-around;
-      font-family: 'Franklin Gothic Medium', sans-serif;
       font-size: 15px;
     }
 }

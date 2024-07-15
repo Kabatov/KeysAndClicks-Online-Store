@@ -4,7 +4,7 @@
             <PromoItems />
         </section>
         <section class="promo-page__info">
-            <PromoInfo :info-blocks="promoBlocks" />
+            <PromoInfo />
         </section>
     </main>
 </template>
@@ -12,18 +12,11 @@
 <script>
 import PromoItems from './PromoItems.vue';
 import PromoInfo from './PromoInfo.vue';
-import { promoInfoData } from './promoInfoData';
 
 export default {
   components: {
     PromoItems,
     PromoInfo
-  },
-
-  data() {
-    return {
-      promoBlocks: promoInfoData
-    };
   }
 };
 </script>
@@ -39,7 +32,6 @@ export default {
 
     &__info {
         padding: 50px 30px 0;
-        font-family: 'Franklin Gothic Medium', sans-serif;
         font-size: 16px;
     }
 }
