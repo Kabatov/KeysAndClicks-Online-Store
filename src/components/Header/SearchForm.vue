@@ -18,25 +18,17 @@
     </form>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      searchPeripher: {
-        peripher: ''
-      }
-    };
-  },
+<script setup>
+import { reactive } from 'vue';
 
-  methods: {
-    searchButton() {
-      this.searchPeripher.id = Date.now();
-      this.searchPeripher = {
-        peripher: ''
-      };
-      console.log('Найдена переферия');
-    }
-  }
+const searchPeripher = reactive({
+  peripher: '',
+  id: null
+});
+
+const searchButton = () => {
+  searchPeripher.id = Date.now();
+  console.log('Найдена переферия', searchPeripher);
 };
 </script>
 

@@ -12,14 +12,17 @@
     </div>
 </template>
 
-<script>
-export default {
-  props: {
-    periphery: {
-      type: Object,
-      required: true
-    }
-  }
+<script setup>
+import { defineProps } from 'vue';
 
-};
+// eslint-disable-next-line no-unused-vars
+const props = defineProps({
+  periphery: Object
+});
+
+// console.log('props: ', props);
+
+// const mainURL = computed(() => {
+//   return props.periphery.image_link....
+// })
 </script>

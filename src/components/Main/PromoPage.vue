@@ -9,16 +9,9 @@
     </main>
 </template>
 
-<script>
+<script setup>
 import PromoItems from './PromoItems.vue';
 import PromoInfo from './PromoInfo.vue';
-
-export default {
-  components: {
-    PromoItems,
-    PromoInfo
-  }
-};
 </script>
 
 <style lang="scss">

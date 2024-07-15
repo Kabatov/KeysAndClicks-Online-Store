@@ -14,7 +14,7 @@
     </Carousel>
 </template>
 
-<script>
+<script setup>
 import 'vue3-carousel/dist/carousel.css';
 import {
   Carousel, Slide, Pagination, Navigation
@@ -23,23 +23,8 @@ import { ref } from 'vue';
 import { peripheryData } from './peripheryData';
 import PromoItem from './PromoItem.vue';
 
-export default {
-  name: 'PromoItems',
-  components: {
-    PromoItem,
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation
-  },
-  setup() {
-    const peripherys = ref(peripheryData);
-
-    return {
-      peripherys
-    };
-  }
-};
+const peripherys = ref(peripheryData);
+console.log('куку', peripherys.value);
 </script>
 
 <style lang="scss">
