@@ -12,6 +12,7 @@
 <script setup>
 import PromoItems from './PromoItems.vue';
 import PromoInfo from './PromoInfo.vue';
+
 </script>
 
 <style lang="scss">

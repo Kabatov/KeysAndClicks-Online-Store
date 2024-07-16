@@ -33,31 +33,21 @@
     </footer>
 </template>
 
-<script>
+<script setup>
+import { reactive, ref } from 'vue';
 import LinksList from './LinksList.vue';
 import { footerBlocksData } from './footerBlocksData';
 
-export default {
-  components: {
-    LinksList
-  },
-  data() {
-    return {
-      subscribeEmail: {
-        email: ''
-      },
-      blocks: footerBlocksData
-    };
-  },
-  methods: {
-    handleAddEmail() {
-      this.subscribeEmail.id = Date.now();
-      this.subscribeEmail = {
-        email: ''
-      };
-      console.log('Добавлена новая почта');
-    }
-  }
+const blocks = ref(footerBlocksData);
+
+const subscribeEmail = reactive({
+  email: '',
+  id: null
+});
+
+const handleAddEmail = () => {
+  subscribeEmail.id = Date.now();
+  subscribeEmail.email = '';
 };
 </script>
 

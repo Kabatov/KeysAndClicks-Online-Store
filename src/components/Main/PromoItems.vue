@@ -24,7 +24,6 @@ import { peripheryData } from './peripheryData';
 import PromoItem from './PromoItem.vue';
 
 const peripherys = ref(peripheryData);
-console.log('куку', peripherys.value);
 </script>
 
 <style lang="scss">

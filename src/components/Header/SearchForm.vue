@@ -28,7 +28,7 @@ const searchPeripher = reactive({
 
 const searchButton = () => {
   searchPeripher.id = Date.now();
-  console.log('Найдена переферия', searchPeripher);
+  searchPeripher.peripher = '';
 };
 </script>
 
