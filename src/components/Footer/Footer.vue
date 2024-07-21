@@ -53,6 +53,7 @@ const handleAddEmail = () => {
 
 <style lang="scss">
 .footer {
+    margin-top: 40px;
     padding-top: 50px;
     background-color: black;
     color: white;

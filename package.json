@@ -11,6 +11,7 @@
     "core-js": "^3.8.3",
     "uniqid": "^5.4.0",
     "vue": "^3.2.13",
+    "vue-router": "^4.4.0",
     "vue3-carousel": "^0.3.3"
   },
   "devDependencies": {

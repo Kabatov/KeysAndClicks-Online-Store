@@ -6,21 +6,26 @@
                 v-for="item in links"
                 :key="item.link"
             >
-                <a
-                    :href="item.link"
+                <RouterLink
+                    :to="item.link"
                     class="navigation__link"
                 >
                     {{ item.name }}
-                </a>
+                </RouterLink>
             </li>
         </ul>
     </nav>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
 import { navigationData } from './navigationData';
 
 export default {
+  components: {
+    RouterLink
+  },
+
   props: {
     links: {
       type: Array,

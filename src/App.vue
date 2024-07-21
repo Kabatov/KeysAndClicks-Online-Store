@@ -1,20 +1,18 @@
 <template>
     <div class="keys-and-clicks">
         <Header />
-        <PromoPage />
+        <RouterView />
         <Footer />
     </div>
 </template>
 
 <script>
 import Header from './components/Header/Header.vue';
-import PromoPage from './components/Main/PromoPage.vue';
 import Footer from './components/Footer/Footer.vue';
 
 export default {
   components: {
     Header,
-    PromoPage,
     Footer
   }
 };
