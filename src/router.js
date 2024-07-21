@@ -1,4 +1,7 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import {
+  createWebHistory,
+  createRouter
+} from 'vue-router';
 import CatalogPage from './components/Catalog-Products/CatalogPage.vue';
 import PromoPage from './components/Main/PromoPage.vue';
 

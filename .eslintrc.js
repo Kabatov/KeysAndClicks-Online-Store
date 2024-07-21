@@ -58,6 +58,7 @@ module.exports = {
     }],
     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'import/prefer-default-export': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'import/no-extraneous-dependencies': 'off'
   }
 };
