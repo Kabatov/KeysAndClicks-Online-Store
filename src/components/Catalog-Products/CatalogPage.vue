@@ -6,22 +6,15 @@
         <div class="catalog-page__container">
             <CatalogFilter />
             <div class="catalog-page__list">
-                <CatalogList
-                    v-for="product in products"
-                    :key="product.id"
-                />
+                <ProductsList />
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import CatalogFilter from './CatalogFilter.vue';
-import CatalogList from './CatalogList.vue';
-import { productsList } from './productsList';
-
-const products = ref(productsList);
+import ProductsList from './ProductsList.vue';
 
 </script>
 

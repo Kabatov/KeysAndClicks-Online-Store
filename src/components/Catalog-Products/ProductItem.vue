@@ -1,10 +1,10 @@
 <template>
     <div class="catalog-page__products">
         <h2 class="catalog-page__product-name">
-            {{ products.name_product }}
+            {{ products.name }}
         </h2>
         <p class="catalog-page__product-description">
-            {{ products.description_product }}
+            {{ products.description }}
         </p>
         <p class="catalog-page__product-price">
             Цена: {{ products.price }} ₽
