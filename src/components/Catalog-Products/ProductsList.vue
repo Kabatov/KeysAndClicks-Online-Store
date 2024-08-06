@@ -1,19 +1,16 @@
 <template>
-    <div>
+    <div class="catalog-page__list">
         <ProductItem
-            :products="products"
-            v-for="product in products"
+            :product="product"
+            v-for="product in productsListData"
             :key="product.id"
         />
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import ProductItem from './ProductItem.vue';
 import { productsListData } from './productsListData';
-
-const products = ref(productsListData);
 </script>
 
 <style>

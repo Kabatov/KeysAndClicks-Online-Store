@@ -76,7 +76,7 @@
                     Vortex
                 </option>
                 <option value="Wuzen">
-                    Wuzen
+                    Durgod
                 </option>
             </select>
         </div>

@@ -5,9 +5,7 @@
         </h1>
         <div class="catalog-page__container">
             <CatalogFilter />
-            <div class="catalog-page__list">
-                <ProductsList />
-            </div>
+            <ProductsList />
         </div>
     </div>
 </template>
@@ -34,7 +32,7 @@ import ProductsList from './ProductsList.vue';
 
   &__list {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: end;
     gap: 20px;
     padding: 0 30px 0 30px;
@@ -46,12 +44,12 @@ import ProductsList from './ProductsList.vue';
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: 200px;
+    width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   &__product-name {
-    font-size: 1.5em;
+    font-size: 18px;
     margin: 0;
   }
 
@@ -61,6 +59,11 @@ import ProductsList from './ProductsList.vue';
 
   &__product-price {
     margin: 5px 0;
+  }
+
+  &__image {
+    width: 250px;
+    height: 150px;
   }
 }
 </style>
