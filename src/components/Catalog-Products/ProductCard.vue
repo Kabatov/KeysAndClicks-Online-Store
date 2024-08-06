@@ -66,11 +66,13 @@
 
 <script setup>
 import { defineProps } from 'vue';
+import { productsListData } from './productsListData';
 
-// eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  product: Object
+  productId: Number
 });
+
+const product = productsListData.find((productItem) => productItem.id === props.productId);
 </script>
 
 <style lang="scss">

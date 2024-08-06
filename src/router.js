@@ -6,10 +6,26 @@ import CatalogPage from './components/Catalog-Products/CatalogPage.vue';
 import ProductCard from './components/Catalog-Products/ProductCard.vue';
 import PromoPage from './components/Main/PromoPage.vue';
 
+const parseProductProp = (route) => ({
+  productId: route.params.productId
+});
+
 const routes = [
-  { path: '/', component: PromoPage },
-  { path: '/catalog', component: CatalogPage },
-  { path: '/catalog/:product-id', component: ProductCard }
+  {
+    path: '/',
+    component: PromoPage
+  },
+  {
+    name: 'catalog',
+    path: '/catalog',
+    component: CatalogPage
+  },
+  {
+    name: 'product',
+    path: '/catalog/:productId',
+    component: ProductCard,
+    props: parseProductProp
+  }
 ];
 
 const router = createRouter({

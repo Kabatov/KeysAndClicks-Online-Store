@@ -1,5 +1,10 @@
 <template>
-    <router-link to="/catalog/:product-id">
+    <router-link
+        :to="{
+            name: 'product',
+            params: { productId: product.id }
+        }"
+    >
         <div class="catalog-page__products">
             <img
                 class="catalog-page__image"
