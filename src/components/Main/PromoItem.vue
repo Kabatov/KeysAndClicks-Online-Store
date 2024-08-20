@@ -19,10 +19,4 @@ import { defineProps } from 'vue';
 const props = defineProps({
   periphery: Object
 });
-
-// console.log('props: ', props);
-
-// const mainURL = computed(() => {
-//   return props.periphery.image_link....
-// })
 </script>

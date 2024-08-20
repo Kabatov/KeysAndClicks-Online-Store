@@ -4,85 +4,12 @@
             Фильтры
         </h3>
 
-        <div class="catalog-filter__category">
-            <h4 class="catalog-filter__title-category">
-                Категория
-            </h4>
-            <label class="catalog-filter__list">
-                <input
-                    type="checkbox"
-                    name="category"
-                    value="keyboards"
-                > Клавиатура
-            </label>
-            <label class="catalog-filter__list">
-                <input
-                    type="checkbox"
-                    name="category"
-                    value="mice"
-                > Мышки и периферия
-            </label>
-            <label class="catalog-filter__list">
-                <input
-                    type="checkbox"
-                    name="category"
-                    value="upgrade"
-                > Апргейд клавиатур
-            </label>
-            <label class="catalog-filter__list">
-                <input
-                    type="checkbox"
-                    name="category"
-                    value="tools"
-                > Инструменты и детали
-            </label>
-        </div>
-
-        <div class="catalog-filter__price">
-            <h4 class="catalog-filter__title-price">
-                Цена
-            </h4>
-            <input
-                class="catalog-filter__input"
-                type="range"
-                min="0"
-                max="1000"
-                id="priceRange"
-            >
-            <p>Максимальная цена: <span id="priceValue">60000</span> руб.</p>
-        </div>
-
-        <div class="catalog-filter__brand">
-            <h4 class="catalog-filter__title-brand">
-                Бренд
-            </h4>
-            <select class="catalog-filter__brand-list">
-                <option value="all">
-                    Все товары
-                </option>
-                <option value="Varmilo">
-                    Varmilo
-                </option>
-                <option value="Leopold">
-                    Leopold
-                </option>
-                <option value="Keychron">
-                    Keychron
-                </option>
-                <option value="Logitech">
-                    Logitech
-                </option>
-                <option value="Vortex">
-                    Vortex
-                </option>
-                <option value="Wuzen">
-                    Durgod
-                </option>
-            </select>
-        </div>
+        <CatalogFilterList v-model="categoryData" />
+        <CatalogFilterPrice v-model="priceRange" />
+        <CatalogFilterBrand v-model="brandData" />
 
         <button
-            type="button"
+            @click.prevent="applyFilters"
             class="catalog-filter__button"
         >
             Применить фильтр
@@ -90,9 +17,20 @@
     </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { ref } from 'vue';
+import CatalogFilterPrice from './CatalogFilterPrice.vue';
+import CatalogFilterBrand from './CatalogFilterBrand.vue';
+import CatalogFilterList from './CatalogFilterList.vue';
 
+const priceRange = ref('');
+const brandData = ref('All');
+const categoryData = ref('');
+
+const applyFilters = () => {
+  console.log('Цена:', priceRange.value);
+  console.log('Бренд:', brandData.value);
+  console.log('Категории:', categoryData.value);
 };
 </script>
 
@@ -111,7 +49,7 @@ export default {
         padding-top: 20px;
     }
 
-    &__category {
+    &__list {
         margin-bottom: 15px;
     }
 
@@ -123,7 +61,7 @@ export default {
         margin-bottom: 15px;
     }
 
-    &__list {
+    &__item {
         padding-top: 10px;
         display: block;
     }
