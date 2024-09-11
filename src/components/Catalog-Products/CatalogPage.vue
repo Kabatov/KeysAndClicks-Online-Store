@@ -7,6 +7,7 @@
             <CatalogFilter @aplyteFilters="handleFilter" />
             <ProductsList :aply-filter="aplyFilter" />
         </div>
+        <router-view />
     </div>
 </template>
 

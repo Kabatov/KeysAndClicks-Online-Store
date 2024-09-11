@@ -5,7 +5,7 @@
         <div class="header__search">
             <SearchForm />
             <router-link
-                :to="{name: 'basket'}"
+                to="/basket"
                 class="header__search-basket"
             >
                 Корзина
