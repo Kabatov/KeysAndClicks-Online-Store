@@ -4,13 +4,17 @@
             Описание
         </h2>
         <p class="product-card__description">
-            {{ product.description }}
+            {{ description }}
         </p>
     </div>
 </template>
 
 <script setup>
+import { defineProps } from 'vue';
 
+defineProps({
+  description: String
+});
 </script>
 
 <style>

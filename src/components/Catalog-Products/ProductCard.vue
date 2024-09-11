@@ -2,11 +2,11 @@
     <div class="product-card__container">
         <div class="product-card">
             <div class="product-card__card">
-                <img
+                <!-- <img
                     class="product-card__image"
                     :src="product.image_link"
                     :alt="product.name"
-                >
+                > -->
             </div>
             <div class="product-card__card-price">
                 <h2 class="product-card__name">
@@ -31,8 +31,8 @@
                 </button>
             </div>
         </div>
-        <ProductCardDescription />
-        <ProductCardCharacteristics />
+        <ProductCardDescription :description="product.description" />
+        <ProductCardCharacteristics :characteristics="product.characteristics" />
     </div>
 </template>
 
@@ -111,11 +111,13 @@ const product = productsListData.find((productItem) => productItem.id === props.
 
   &__characteristics-name {
     text-align: center;
+    margin-bottom: 10px;
   }
 
   &__characteristics-data {
+    width: 500px;
     padding: 10px;
-    margin: 10px 400px 0 400px;
+    margin: 0 auto;
     font-size: 20px;
     border: 3px solid #6495ED;
     border-radius: 25px;

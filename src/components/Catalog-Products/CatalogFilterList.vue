@@ -11,27 +11,27 @@
             <input
                 type="checkbox"
                 v-model="categoryBrand[category.model]"
-                @change="updateCategories"
             > {{ category.name }}
         </label>
     </div>
 </template>
 
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { reactive, defineEmits, watch } from 'vue';
 import { catalogFilterCategory } from './catalogFilterCategory';
 
 const emit = defineEmits();
-const categoryBrand = ref({
+const categoryBrand = reactive({
   valueKeyboard: false,
   valueMice: false,
   valueUpgrade: false,
   valueTools: false
 });
 
-const updateCategories = () => {
-  emit('update:modelValue', categoryBrand.value);
-};
+watch(categoryBrand, (newValue) => {
+  console.log(categoryBrand, 'это лист');
+  emit('update:modelValue', newValue);
+}, { deep: true });
 </script>
 
 <style>

@@ -27,6 +27,7 @@ const valueBrand = ref('All');
 const emit = defineEmits();
 
 const updateBrand = () => {
+  console.log(updateBrand, 'это бренд');
   emit('update:modelValue', valueBrand.value);
 };
 </script>

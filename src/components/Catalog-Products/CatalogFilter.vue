@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 import CatalogFilterPrice from './CatalogFilterPrice.vue';
 import CatalogFilterBrand from './CatalogFilterBrand.vue';
 import CatalogFilterList from './CatalogFilterList.vue';
@@ -26,11 +26,14 @@ import CatalogFilterList from './CatalogFilterList.vue';
 const priceRange = ref('');
 const brandData = ref('All');
 const categoryData = ref('');
+const emit = defineEmits();
 
 const applyFilters = () => {
-  console.log('Цена:', priceRange.value);
-  console.log('Бренд:', brandData.value);
-  console.log('Категории:', categoryData.value);
+  emit('aplyteFilters', {
+    price: priceRange.value,
+    brand: brandData.value,
+    category: categoryData.value
+  });
 };
 </script>
 

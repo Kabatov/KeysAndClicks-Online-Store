@@ -21,6 +21,7 @@ const valueRange = ref('');
 const emit = defineEmits();
 
 const updatePrice = () => {
+  console.log(updatePrice, 'это инпут');
   emit('update:modelValue', valueRange.value);
 };
 </script>
