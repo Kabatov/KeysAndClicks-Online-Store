@@ -31,7 +31,3 @@ const searchButton = () => {
   searchPeripher.peripher = '';
 };
 </script>
-
-<style>
-
-</style>

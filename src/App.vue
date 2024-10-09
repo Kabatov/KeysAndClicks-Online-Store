@@ -1,7 +1,7 @@
 <template>
     <div class="keys-and-clicks">
         <Header />
-        <RouterView />
+        <router-view />
         <Footer />
     </div>
 </template>

@@ -73,11 +73,13 @@ const handleAddEmail = () => {
     }
 
     &__mail_subscribe {
-      width: 640px;
+      width: 50%;
       height: 65px;
       border-radius: 30px;
       font-size: 20px;
       padding: 0 200px 0 20px;
+      display: block;
+      margin: 0 auto;
     }
 
     &__mail_button {

@@ -1,19 +1,21 @@
 <template>
     <header class="header">
         <NavigationItems />
+        <!-- <ListItemsBasket /> -->
         <div class="header__search">
             <SearchForm />
-            <a
-                href="#"
+            <router-link
+                to="/basket"
                 class="header__search-basket"
             >
                 Корзина
-            </a>
+            </router-link>
         </div>
     </header>
 </template>
 
 <script>
+/* import ListItemsBasket from './ListItemsBasket.vue'; */
 import NavigationItems from './NavigationItems.vue';
 import SearchForm from './SearchForm.vue';
 
@@ -21,6 +23,7 @@ export default {
   components: {
     NavigationItems,
     SearchForm
+    /* ListItemsBasket */
   }
 };
 </script>
@@ -29,6 +32,7 @@ export default {
 .header {
     padding: 30px;
     display: flex;
+    justify-content: space-between;
     background-color: white;
 
     &__search {

@@ -2,13 +2,11 @@
     <div class="product-card__container">
         <div class="product-card">
             <div class="product-card__card">
-                <img
+                <!-- <img
                     class="product-card__image"
                     :src="product.image_link"
                     :alt="product.name"
-                    width="700"
-                    height="400"
-                >
+                > -->
             </div>
             <div class="product-card__card-price">
                 <h2 class="product-card__name">
@@ -33,40 +31,16 @@
                 </button>
             </div>
         </div>
-        <div class="product-card__description-container">
-            <h2 class="product-card__description-name">
-                Описание
-            </h2>
-            <p class="product-card__description">
-                {{ product.description }}
-            </p>
-        </div>
-        <div class="product-card__characteristics">
-            <h2 class="product-card__characteristics-name">
-                Характеристики
-            </h2>
-            <div class="product-card__characteristics-data">
-                <table>
-                    <tr
-                        v-for="(value, label) in product.characteristics"
-                        :key="label"
-                    >
-                        <td class="product-card__characteristics-label">
-                            {{ label }}
-                        </td>
-                        <td class="product-card__meaning">
-                            {{ value }}
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <ProductCardDescription :description="product.description" />
+        <ProductCardCharacteristics :characteristics="product.characteristics" />
     </div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue';
 import { productsListData } from './productsListData';
+import ProductCardDescription from './ProductCardDescription.vue';
+import ProductCardCharacteristics from './ProductCardCharacteristics.vue';
 
 const props = defineProps({
   productId: Number
@@ -83,6 +57,8 @@ const product = productsListData.find((productItem) => productItem.id === props.
 
   &__image {
     border-radius: 20px;
+    width: 700px;
+    height: 400px;
   }
 
   &__name {
@@ -103,6 +79,7 @@ const product = productsListData.find((productItem) => productItem.id === props.
     border-radius: 15px;
     border: 1px solid white;
     background-color: #6495ED;
+    cursor: pointer;
   }
 
   &__key-select {
@@ -134,11 +111,13 @@ const product = productsListData.find((productItem) => productItem.id === props.
 
   &__characteristics-name {
     text-align: center;
+    margin-bottom: 10px;
   }
 
   &__characteristics-data {
+    width: 500px;
     padding: 10px;
-    margin: 10px 400px 0 400px;
+    margin: 0 auto;
     font-size: 20px;
     border: 3px solid #6495ED;
     border-radius: 25px;

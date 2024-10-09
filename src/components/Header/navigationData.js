@@ -1,5 +1,5 @@
 export const navigationData = [
-  { link: '/', name: 'Логотип' },
+  { link: '/', name: 'Главная' },
   { link: '#', name: 'Что нового?' },
   { link: '/catalog', name: 'Магазин' },
   { link: '#', name: 'Re-sale🔥' },

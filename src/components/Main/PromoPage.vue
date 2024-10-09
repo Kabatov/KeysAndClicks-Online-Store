@@ -6,6 +6,7 @@
         <section class="promo-page__info">
             <PromoInfo />
         </section>
+        <router-view />
     </main>
 </template>
 

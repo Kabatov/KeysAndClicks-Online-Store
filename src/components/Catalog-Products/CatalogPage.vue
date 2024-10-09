@@ -4,16 +4,24 @@
             Кликай в удовольствие!
         </h1>
         <div class="catalog-page__container">
-            <CatalogFilter />
-            <ProductsList />
+            <CatalogFilter @aplyteFilters="handleFilter" />
+            <ProductsList :aply-filter="aplyFilter" />
         </div>
+        <router-view />
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import CatalogFilter from './CatalogFilter.vue';
 import ProductsList from './ProductsList.vue';
 
+const aplyFilter = ref(null);
+
+const handleFilter = (payLoad) => {
+  aplyFilter.value = payLoad;
+  console.log(payLoad, 'Вот он!!!');
+};
 </script>
 
 <style lang="scss">

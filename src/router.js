@@ -5,6 +5,7 @@ import {
 import CatalogPage from './components/Catalog-Products/CatalogPage.vue';
 import ProductCard from './components/Catalog-Products/ProductCard.vue';
 import PromoPage from './components/Main/PromoPage.vue';
+import Basket from './components/Header/Basket.vue';
 
 const parseProductProp = (route) => ({
   productId: route.params.productId
@@ -12,19 +13,37 @@ const parseProductProp = (route) => ({
 
 const routes = [
   {
-    path: '/',
-    component: PromoPage
+    name: 'promo',
+    component: PromoPage,
+    children: [
+      {
+        path: '/basket',
+        component: Basket
+      }
+    ]
   },
   {
     name: 'catalog',
     path: '/catalog',
-    component: CatalogPage
+    component: CatalogPage,
+    children: [
+      {
+        path: '/basket',
+        component: Basket
+      }
+    ]
   },
   {
     name: 'product',
     path: '/catalog/:productId',
     component: ProductCard,
-    props: parseProductProp
+    props: parseProductProp,
+    children: [
+      {
+        path: '/basket',
+        component: Basket
+      }
+    ]
   }
 ];
 
